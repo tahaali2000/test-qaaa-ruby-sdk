@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
-  s.name = 'test-qaaa-sdk'
-  s.version = '1.1.0'
+  s.name = 'test-sc-ruby'
+  s.version = '2.3.6'
   s.summary = 'Test '
-  s.description = 'qaqqa'
+  s.description = 'ruby'
   s.authors = ['taha']
   s.email = ['taha.ali@apimatic.io']
   s.homepage = 'https://qatesting1.dev.apimatic.dev'
