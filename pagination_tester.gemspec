@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'test-qaaa-sdk'
-  s.version = '1.2.0'
+  s.version = '1.2.3'
   s.summary = 'Test '
   s.description = 'qaqqa'
   s.authors = ['taha']
