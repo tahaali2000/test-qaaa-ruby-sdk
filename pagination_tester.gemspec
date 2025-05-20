@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'test-sc-ruby'
-  s.version = '1.2.6'
+  s.version = '1.3.9'
   s.summary = 'Test '
   s.description = 'ruby'
   s.authors = ['taha']
