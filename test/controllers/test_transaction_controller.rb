@@ -13,24 +13,6 @@ class TransactionControllerTest < ControllerTestBase
     @response_catcher = @controller.http_call_back
   end
 
-  # Fetch transactions using Offset-based Pagination
-  def test_fetch_with_offset
-    # Parameters for the API call
-    offset = 0
-    limit = 10
-
-    # Perform the API call through the SDK function
-    result = @controller.fetch_with_offset(offset: offset, limit: limit)
-
-    # Test response code
-    assert_equal(200, @response_catcher.response.status_code)
-    # Test headers
-    expected_headers = {}
-    expected_headers['content-type'] = 'application/json; charset=utf-8'
-
-    assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
-  end
-
   # Fetch transactions using Cursor-based Pagination
   def test_fetch_with_cursor
     # Parameters for the API call
@@ -57,6 +39,24 @@ class TransactionControllerTest < ControllerTestBase
 
     # Perform the API call through the SDK function
     result = @controller.fetch_with_link(page: page, size: size)
+
+    # Test response code
+    assert_equal(200, @response_catcher.response.status_code)
+    # Test headers
+    expected_headers = {}
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
+
+    assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
+  end
+
+  # Fetch transactions using Offset-based Pagination
+  def test_fetch_with_offset
+    # Parameters for the API call
+    offset = 0
+    limit = 10
+
+    # Perform the API call through the SDK function
+    result = @controller.fetch_with_offset(offset: offset, limit: limit)
 
     # Test response code
     assert_equal(200, @response_catcher.response.status_code)

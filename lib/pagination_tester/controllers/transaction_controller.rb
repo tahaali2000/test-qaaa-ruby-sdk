@@ -6,27 +6,6 @@
 module PaginationTester
   # TransactionController
   class TransactionController < BaseController
-    # Fetch transactions using Offset-based Pagination
-    # @param [Integer] offset Optional parameter: The number of records to skip
-    # before selecting transactions.
-    # @param [Integer] limit Optional parameter: Number of transactions per
-    # page.
-    # @return [TransactionsOffset] response from the API call.
-    def fetch_with_offset(offset: 0,
-                          limit: 10)
-      new_api_call_builder
-        .request(new_request_builder(HttpMethodEnum::GET,
-                                     '/transactions/offset',
-                                     Server::DEFAULT)
-                   .query_param(new_parameter(offset, key: 'offset'))
-                   .query_param(new_parameter(limit, key: 'limit'))
-                   .header_param(new_parameter('application/json', key: 'accept')))
-        .response(new_response_handler
-                    .deserializer(APIHelper.method(:custom_type_deserializer))
-                    .deserialize_into(TransactionsOffset.method(:from_hash)))
-        .execute
-    end
-
     # Fetch transactions using Cursor-based Pagination
     # @param [String] cursor Optional parameter: The unique identifier (cursor)
     # to fetch the next set of results.
@@ -65,6 +44,27 @@ module PaginationTester
         .response(new_response_handler
                     .deserializer(APIHelper.method(:custom_type_deserializer))
                     .deserialize_into(TransactionsLinked.method(:from_hash)))
+        .execute
+    end
+
+    # Fetch transactions using Offset-based Pagination
+    # @param [Integer] offset Optional parameter: The number of records to skip
+    # before selecting transactions.
+    # @param [Integer] limit Optional parameter: Number of transactions per
+    # page.
+    # @return [TransactionsOffset] response from the API call.
+    def fetch_with_offset(offset: 0,
+                          limit: 10)
+      new_api_call_builder
+        .request(new_request_builder(HttpMethodEnum::GET,
+                                     '/transactions/offset',
+                                     Server::DEFAULT)
+                   .query_param(new_parameter(offset, key: 'offset'))
+                   .query_param(new_parameter(limit, key: 'limit'))
+                   .header_param(new_parameter('application/json', key: 'accept')))
+        .response(new_response_handler
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(TransactionsOffset.method(:from_hash)))
         .execute
     end
   end

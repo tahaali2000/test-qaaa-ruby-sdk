@@ -27,11 +27,11 @@ require_relative 'pagination_tester/http/http_response'
 
 # Models
 require_relative 'pagination_tester/models/base_model'
+require_relative 'pagination_tester/models/links'
+require_relative 'pagination_tester/models/transactions_linked'
 require_relative 'pagination_tester/models/transaction'
 require_relative 'pagination_tester/models/transactions_offset'
 require_relative 'pagination_tester/models/transactions_cursored'
-require_relative 'pagination_tester/models/transactions_linked'
-require_relative 'pagination_tester/models/links'
 
 # Exceptions
 require_relative 'pagination_tester/exceptions/api_exception'

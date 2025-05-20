@@ -10,43 +10,9 @@ transaction_controller = client.transaction
 
 ## Methods
 
-* [Fetch With Offset](../../doc/controllers/transaction.md#fetch-with-offset)
 * [Fetch With Cursor](../../doc/controllers/transaction.md#fetch-with-cursor)
 * [Fetch With Link](../../doc/controllers/transaction.md#fetch-with-link)
-
-
-# Fetch With Offset
-
-Fetch transactions using Offset-based Pagination
-
-```ruby
-def fetch_with_offset(offset: 0,
-                      limit: 10)
-```
-
-## Parameters
-
-| Parameter | Type | Tags | Description |
-|  --- | --- | --- | --- |
-| `offset` | `Integer` | Query, Optional | The number of records to skip before selecting transactions.<br><br>**Default**: `0`<br><br>**Constraints**: `>= 0` |
-| `limit` | `Integer` | Query, Optional | Number of transactions per page.<br><br>**Default**: `10`<br><br>**Constraints**: `>= 1`, `<= 100` |
-
-## Response Type
-
-[`TransactionsOffset`](../../doc/models/transactions-offset.md)
-
-## Example Usage
-
-```ruby
-offset = 0
-
-limit = 10
-
-result = transaction_controller.fetch_with_offset(
-  offset: offset,
-  limit: limit
-)
-```
+* [Fetch With Offset](../../doc/controllers/transaction.md#fetch-with-offset)
 
 
 # Fetch With Cursor
@@ -113,6 +79,40 @@ size = 10
 result = transaction_controller.fetch_with_link(
   page: page,
   size: size
+)
+```
+
+
+# Fetch With Offset
+
+Fetch transactions using Offset-based Pagination
+
+```ruby
+def fetch_with_offset(offset: 0,
+                      limit: 10)
+```
+
+## Parameters
+
+| Parameter | Type | Tags | Description |
+|  --- | --- | --- | --- |
+| `offset` | `Integer` | Query, Optional | The number of records to skip before selecting transactions.<br><br>**Default**: `0`<br><br>**Constraints**: `>= 0` |
+| `limit` | `Integer` | Query, Optional | Number of transactions per page.<br><br>**Default**: `10`<br><br>**Constraints**: `>= 1`, `<= 100` |
+
+## Response Type
+
+[`TransactionsOffset`](../../doc/models/transactions-offset.md)
+
+## Example Usage
+
+```ruby
+offset = 0
+
+limit = 10
+
+result = transaction_controller.fetch_with_offset(
+  offset: offset,
+  limit: limit
 )
 ```
 
