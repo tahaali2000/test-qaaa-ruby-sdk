@@ -10,16 +10,16 @@ API demonstrating different pagination techniques.
 Install the gem from the command line:
 
 ```bash
-gem install test-sc-ruby -v 1.1.0
+gem install test-sc-ruby -v 1.1.2
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'test-sc-ruby', '1.1.0'
+gem 'test-sc-ruby', '1.1.2'
 ```
 
-For additional gem details, see the [RubyGems page for the test-sc-ruby gem](https://rubygems.org/gems/test-sc-ruby/versions/1.1.0).
+For additional gem details, see the [RubyGems page for the test-sc-ruby gem](https://rubygems.org/gems/test-sc-ruby/versions/1.1.2).
 
 ## Test the SDK
 
@@ -31,7 +31,7 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -55,17 +55,17 @@ client = PaginationTester::Client.new
 
 ## List of APIs
 
-* [Transaction](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/controllers/transaction.md)
+* [Transaction](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/controllers/transaction.md)
 
 ## SDK Infrastructure
 
 ### HTTP
 
-* [HttpResponse](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/http-request.md)
+* [HttpResponse](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/http-response.md)
+* [HttpRequest](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/http-request.md)
 
 ### Utilities
 
-* [ApiHelper](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/api-helper.md)
-* [DateTimeHelper](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.0/doc/date-time-helper.md)
+* [ApiHelper](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/api-helper.md)
+* [DateTimeHelper](https://www.github.com/tahaali2000/test-qaaa-ruby-sdk/tree/1.1.2/doc/date-time-helper.md)
 
